@@ -7,7 +7,7 @@
 > The backend runs on a free Render plan, so the first request may take a few seconds while it wakes up.
 
 
-![MoodTune home screen]<img width="1497" height="962" alt="image" src="https://github.com/user-attachments/assets/bea8f68f-3f1a-4a08-917b-7dc20f878d0d" />
+![MoodTune home screen]<img width="30%"  alt="image" src="https://github.com/user-attachments/assets/bea8f68f-3f1a-4a08-917b-7dc20f878d0d" />
 
 ![Detected emotion and recommendations]<img width="1467" height="823" alt="image" src="https://github.com/user-attachments/assets/b83cd093-f4b1-4cbb-a091-7e1a1202bf8e" />
 <img width="1462" height="885" alt="image" src="https://github.com/user-attachments/assets/de2141f7-5f54-4fa8-8c5e-c2a7e441e7cd" />
@@ -21,11 +21,12 @@ Music apps often play the wrong thing for the moment you're in. I wanted to try 
 
 ```mermaid
 flowchart LR
-    A[Webcam in the browser] --> B[React frontend on Vercel]
-    B -->|API request| C[FastAPI backend on Render]
-    C --> D[CNN classifies the emotion]
-    D --> E[KNN recommender with cosine similarity]
-    E --> F[Matching tracks returned to the user]
+    A[Webcam image captured in the browser] --> B[React frontend on Vercel]
+    B -->|sends image| C
+    subgraph C [FastAPI backend on Render]
+        D[CNN classifies the emotion] --> E[KNN with cosine similarity finds tracks]
+    end
+    C -->|returns tracks| B
 ```
 
 1. The browser captures your face from the webcam.
