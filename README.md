@@ -7,8 +7,11 @@
 > The backend runs on a free Render plan, so the first request may take a few seconds while it wakes up.
 
 <!-- Add screenshots here once you have them, for example:
-![MoodTune home screen](images/home.png)
-![Detected emotion and recommendations](images/result.png)
+![MoodTune home screen]<img width="1497" height="962" alt="image" src="https://github.com/user-attachments/assets/bea8f68f-3f1a-4a08-917b-7dc20f878d0d" />
+
+![Detected emotion and recommendations]<img width="1467" height="823" alt="image" src="https://github.com/user-attachments/assets/b83cd093-f4b1-4cbb-a091-7e1a1202bf8e" />
+<img width="1462" height="885" alt="image" src="https://github.com/user-attachments/assets/de2141f7-5f54-4fa8-8c5e-c2a7e441e7cd" />
+
 -->
 
 ## Why I built it
@@ -37,7 +40,7 @@ flowchart LR
 - Keras/TensorFlow CNN that classifies 48×48 grayscale face images into 7 emotions: angry, disgust, fear, happy, neutral, sad, surprise
 - Trained on about 30,000 face images
 - **91% accuracy on a held-out test set of 4,165 images** the model never saw during training
-- Full training details: [facial-emotion-recognition](https://github.com/codegeekbrian/facial-emotion-recognition)
+- Full training details: [facial-emotion-recognition]((https://github.com/codegeekbrian/facial-emotion-recognition_Model))
 
 ## The recommendation engine
 
