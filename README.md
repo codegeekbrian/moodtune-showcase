@@ -14,9 +14,9 @@
 <img width="30%"  alt="image" src="https://github.com/user-attachments/assets/de2141f7-5f54-4fa8-8c5e-c2a7e441e7cd" />
 
 
-## Why I built it
+Why I built it
 
-Music apps often play the wrong thing for the moment you're in. I wanted to try a different input: instead of asking what you want to hear, MoodTune looks at how you feel and starts from there. It was my final-year project for my BSc in Software Engineering at Kirinyaga University.
+Music apps often play the wrong thing for the moment you're in. I wanted to try a different input: instead of asking what you want to hear, MoodTune looks at how you feel and starts from there. It was my final-year project for my BSc in Software Engineering.
 
 ## How it works
 
@@ -30,17 +30,16 @@ flowchart LR
     C -->|returns tracks| B
 ```
 
-1. The browser captures your face from the webcam.
-2. The React frontend sends it to the FastAPI backend.
-3. A convolutional neural network classifies the emotion.
-4. A K-nearest-neighbours recommender, using cosine similarity, finds matching tracks.
-5. The tracks come back to the interface.
+1.The browser captures an image from your webcam.
+2.The React frontend sends the image to the FastAPI backend.
+3.The backend does the heavy lifting: a convolutional neural network classifies the emotion, then a K-nearest-neighbours recommender using cosine similarity finds matching tracks.
+4.The backend returns the tracks, and the frontend displays them.
 
 ## The emotion model
 
 - Keras/TensorFlow CNN that classifies 48×48 grayscale face images into 7 emotions: angry, disgust, fear, happy, neutral, sad, surprise
 - Trained on about 30,000 face images
-- **91% accuracy on a held-out test set of 4,165 images** the model never saw during training
+- 91% accuracy on a held-out test set of 4,165 images the model never saw during training
 - Full training details: [facial-emotion-recognition_model](https://github.com/codegeekbrian/facial-emotion-recognition_Model)
 
 ## The recommendation engine
@@ -58,11 +57,10 @@ flowchart LR
 | Recommendations | K-nearest neighbours, cosine similarity |
 | Deployment | Vercel (frontend), Render (backend) |
 
-## About the source code
+About the source codeAbout the source code
 
 The MoodTune source code is private. I'm happy to walk through the architecture and code in an interview or a call.
 
-## Author
+Author
 
-Brian Mutembei · Software Engineering graduate, Kirinyaga University
-[GitHub](https://github.com/codegeekbrian) · [Portfolio](https://codegeekbrian.page.gd) · [LinkedIn](https://www.linkedin.com/in/brian-mutembei) · bmutembei715@gmail.com
+Brian Mutembei · GitHub · Portfolio
