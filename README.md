@@ -57,10 +57,10 @@ flowchart LR
 | Recommendations | K-nearest neighbours, cosine similarity |
 | Deployment | Vercel (frontend), Render (backend) |
 
-About the source codeAbout the source code
+## About the source code
 
 The MoodTune source code is private. I'm happy to walk through the architecture and code in an interview or a call.
 
 Author
 
-Brian Mutembei · GitHub · Portfolio
+Brian Mutembei · [GitHub](https://github.com/codegeekbrian) · [Portfolio](https://codegeekbrian.vercel.app)
